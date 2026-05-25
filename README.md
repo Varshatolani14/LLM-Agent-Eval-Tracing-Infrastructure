@@ -1,4 +1,4 @@
-# Varshabubu: Riverline Agent Intelligence & Evaluation Platform
+# LLM Agent Eval & Tracing Infrastructure 
 
 **The Nervous System of the Bank of 2035.**
 
@@ -100,5 +100,5 @@ At Riverline, we prioritize **speed over comfort** and **momentum over process**
 ---
 
 ## 📬 Contact
-Built with ❤️ by the Riverline Team.  
+Built with ❤️ for the Riverline Team.  
 [team@riverline.ai](mailto:team@riverline.ai)

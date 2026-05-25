@@ -1,9 +1,9 @@
 import asyncio
 import json
 import uuid
-from app.services.queue import get_trace_queue
-from app.db.session import SessionLocal
-from app.models.schemas import Trace, Span, ToolCall
+from ..services.queue import get_trace_queue
+from ..db.session import SessionLocal
+from ..models.schemas import Trace, Span, ToolCall
 from datetime import datetime
 
 async def process_traces():

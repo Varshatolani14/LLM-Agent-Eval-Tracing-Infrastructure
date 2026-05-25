@@ -1,7 +1,7 @@
 from sklearn.cluster import KMeans
 import numpy as np
-from app.db.session import SessionLocal
-from app.models.schemas import Trace, Span, FailureCluster
+from ..db.session import SessionLocal
+from ..models.schemas import Trace, Span, FailureCluster
 import asyncio
 
 async def cluster_failures():

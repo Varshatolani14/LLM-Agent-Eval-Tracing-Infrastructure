@@ -1,7 +1,7 @@
 # from deepeval.metrics import AnswerRelevancyMetric, FaithfulnessMetric
 # from deepeval.test_case import LLMTestCase
-from app.db.session import SessionLocal
-from app.models.schemas import Trace, Span, Evaluation
+from ..db.session import SessionLocal
+from ..models.schemas import Trace, Span, Evaluation
 import asyncio
 
 class MockMetric:

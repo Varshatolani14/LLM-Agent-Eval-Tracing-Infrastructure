@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, BackgroundTasks, Request
-from app.services.queue import get_trace_queue
-from app.db.session import get_db
-from app.models.schemas import Trace
+from ..services.queue import get_trace_queue
+from ..db.session import get_db
+from ..models.schemas import Trace
 from sqlalchemy.orm import Session
 import uuid
 import time

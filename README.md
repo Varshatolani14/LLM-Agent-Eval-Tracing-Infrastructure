@@ -89,16 +89,38 @@ pnpm dev
 ```
 
 ---
+✦ Project Architecture & Key Components
 
-## 🧠 Founder Mode & Philosophy
+  This infrastructure is designed for high-performance LLM agent evaluation, featuring a decoupled backend for trace processing and a modern, reactive
+  frontend for visualization.
 
-At Riverline, we prioritize **speed over comfort** and **momentum over process**. 
-- **AI-First Operating OS:** We don't just use AI; we build systems that allow AI to improve itself.
-- **Patch, Fork, Build:** We don't wait for open-source; we ship what's needed by tonight.
-- **Paranoia as a Virtue:** If metrics aren't moving, we're failing.
+  1. Backend (Python/FastAPI)
+  The core logic resides in a high-concurrency FastAPI server that handles data collection and asynchronous evaluation.
+   * Collector API: High-throughput endpoints for receiving real-time traces from agents.
+   * Trace Processor: Logic for decomposing complex agent traces into evaluatable units.
+   * Evaluation Worker: Asynchronous workers that execute deepeval metrics (Faithfulness, Answer Relevancy, etc.) without blocking the main API thread.
+   * Failure Intelligence: A specialized module that identifies patterns in agent failures and provides actionable insights.
+
+  2. Frontend (Next.js/TypeScript)
+  A professional-grade dashboard built for observability and deep-dive analysis.
+   * Real-time Dashboard: Visualizes agent performance metrics and success rates.
+   * Trace Navigator: An interactive UI to step through complex multi-turn agent interactions.
+   * Evaluation Reports: Detailed breakdowns of why specific runs failed, including automated suggestions for prompt/model improvements.
+
+  3. Data & DevOps
+   * SQLite/SQLAlchemy: Lightweight yet robust data persistence for evaluation logs.
+   * Dockerized Environment: Fully containerized setup via docker-compose for consistent deployment across staging and production.
+   * Red Team Scripts: Included Python scripts in scripts/ for simulating adversarial attacks to test agent robustness.
+
+  Evaluation Metrics
+  We leverage industry-standard metrics to ensure rigorous agent assessment:
+   * G-Eval: Using LLMs to evaluate LLMs based on custom criteria.
+   * Hallucination Detection: Automated checks for factual consistency.
+   * Latency & Token Analysis: Monitoring the cost and speed of every agent decision.
+
 
 ---
 
-## 📬 Contact
+## 📬 Made for
 Built with ❤️ for the Riverline Team.  
 [team@riverline.ai](mailto:team@riverline.ai)

@@ -2,7 +2,7 @@
 
 **The Nervous System of the Bank of 2035.**
 
-Varshabubu is the core evaluation and observability infrastructure for [Riverline](https://riverline.ai). It powers our mission to serve credit-starved Indians by ensuring our AI agents (Voice, WhatsApp, Email) are precise, auditable, and constantly improving.
+Varshabubu is the core evaluation and observability infrastructure which powers our mission to serve credit-starved Indians by ensuring our AI agents (Voice, WhatsApp, Email) are precise, auditable, and constantly improving.
 
 This platform bridges the gap between raw LLM outputs and production-grade reliability through numerical evaluation, automated failure discovery, and adversarial testing.
 
@@ -120,7 +120,3 @@ pnpm dev
 
 
 ---
-
-## 📬 Made for
-Built with ❤️ for the Riverline Team.  
-[team@riverline.ai](mailto:team@riverline.ai)
